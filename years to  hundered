@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    char name[50];
+    int age, years_to_hundred;
+
+    printf("👋 Welcome to the Custom Greeting Generator!\n");
+    
+    // Get the user's name
+    printf("Enter your first name: ");
+    scanf("%s", name);
+
+    // Get the user's age
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    // Calculate years until turning 100
+    years_to_hundred = 100 - age;
+
+    // Print the custom message
+    printf("\n✨ Hello, %s! ✨\n", name);
+    if (years_to_hundred > 0) {
+        printf("You are %d years old. Only %d more years until you hit 100! 🎂\n", age, years_to_hundred);
+    } else {
+        printf("Wow, you are %d years old! You have already passed the century mark! 🎉\n", age);
+    }
+
+    return 0;
+}
